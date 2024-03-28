@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:conic-gradient(red,black,green,pink);
+        }
+        .main{
+            border: 2px solid black;
+            border-radius: 10px;
+            height:600px;
+            width:600px;
+            margin-left: 500px;
+            margin-top: 100px;
+            background-image:radial-gradient(blue,pink,yellow);
+        }
+        .cd{
+            border:2px solid black;
+            border-radius: 5px;
+            height: 200px;
+            width: 200px;
+            background-image: linear-gradient(rgb(206, 71, 93),rgb(120, 120, 240),aqua);
+            margin-left: 200px;
+            margin-top:150px;
+        }
+        .a1:active~.cd{
+            transform:perspective(200px) skew(50deg);
+        }
+        .a2:active~.cd{
+            transform: perspective(100px) scale(2);
+        }
+        .a3:active~.cd{
+            transform: perspective(100px) rotate(60deg);
+        }
+        .a4:active~.cd{
+            transform:perspective(100px) translate(120px,120px);
+        }
+        button{
+            font-size:30px;
+            padding:30px;
+            background-image:conic-gradient(pink,blue,yellow);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+            <button class="a1">skew</button>
+            <button class="a2">scale</button>
+            <button class="a3">rotate</button>
+            <button class="a4">translate</button>
+            <div class="cd"></div>
+
+    </div>
+</body>
+</html>
